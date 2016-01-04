@@ -282,12 +282,6 @@ angular.module('zeppelinWebApp').controller('NotebookCtrl',
     $scope.setConfig();
   };
 
-  /** Set release resource for this note **/
-  $scope.setReleaseResource = function(value) {
-    $scope.note.config.releaseresource = value;
-    $scope.setConfig();
-  };
-
   /** Update note config **/
   $scope.setConfig = function(config) {
     if(config) {

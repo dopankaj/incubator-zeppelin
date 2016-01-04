@@ -12,17 +12,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <div class="navbar navbar-inverse navbar-fixed-top" style="display: none;" role="navigation" ng-class="{'displayNavBar': !asIframe}">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#/">
-        <img style="margin-top: -7px;s" src="assets/images/zepLogoW.png" width="50" alt="I'm zeppelin"> Zeppelin
-      </a>
-    </div>
+  <!-- <div class="container"> -->
+  <!--   <div class="navbar-header"> -->
+  <!--     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"> -->
+  <!--       <span class="icon-bar"></span> -->
+  <!--       <span class="icon-bar"></span> -->
+  <!--       <span class="icon-bar"></span> -->
+  <!--     </button> -->
+  <!--     <a class="navbar-brand" href="#/"> -->
+  <!--       <img style="margin-top: -7px;s" src="assets/images/zepLogoW.png" width="50" alt="I'm zeppelin"> Zeppelin -->
+  <!--     </a> -->
+  <!--   </div> -->
 
     <div class="collapse navbar-collapse" ng-controller="NavCtrl as navbar">
       <ul class="nav navbar-nav">
@@ -40,41 +40,41 @@ limitations under the License.
           </ul>
         </li>
         <li>
-          <a href="#/interpreter">Interpreter</a>
-        </li>
+      <!--     <a href="#/interpreter">Interpreter</a> -->
+      <!--   </li> -->
       </ul>
 
 
       <ul class="nav navbar-nav navbar-right" style="margin-top:10px; margin-right:5px;">
-        <li>
-        <!--TODO(bzz): move to Typeahead https://angular-ui.github.io/bootstrap  -->
-          <form role="search"
-            style="width: 300px; display: inline-block; margin: 0 10px"
-             ng-submit="search()">
-            <div class="input-group">
-              <input
-                type="text"
-                ng-model="searchTerm"
-                ng-disabled="!navbar.connected"
-                class="form-control"
-                placeholder="Search in your notebooks"
-              />
-              <span class="input-group-btn">
-                <button
-                  type="submit"
-                  class="btn btn-default"
-                  ng-disabled="!navbar.connected"
-                >
-                  <i class="glyphicon glyphicon-search"></i>
-                </button>
-              </span>
-            </div>
-          </form>
-        </li>
+        <!-- <li> -->
+        <!-- <\!--TODO(bzz): move to Typeahead https://angular-ui.github.io/bootstrap  -\-> -->
+        <!--   <form role="search" -->
+        <!--     style="width: 300px; display: inline-block; margin: 0 10px" -->
+        <!--      ng-submit="search()"> -->
+        <!--     <div class="input-group"> -->
+        <!--       <input -->
+        <!--         type="text" -->
+        <!--         ng-model="searchTerm" -->
+        <!--         ng-disabled="!navbar.connected" -->
+        <!--         class="form-control" -->
+        <!--         placeholder="Search in your notebooks" -->
+        <!--       /> -->
+        <!--       <span class="input-group-btn"> -->
+        <!--         <button -->
+        <!--           type="submit" -->
+        <!--           class="btn btn-default" -->
+        <!--           ng-disabled="!navbar.connected" -->
+        <!--         > -->
+        <!--           <i class="glyphicon glyphicon-search"></i> -->
+        <!--         </button> -->
+        <!--       </span> -->
+        <!--     </div> -->
+        <!--   </form> -->
+        <!-- </li> -->
         <li class="server-status">
           <i class="fa fa-circle" ng-class="{'server-connected':navbar.connected, 'server-disconnected':!navbar.connected}"></i>
-          <span ng-show="navbar.connected">Connected</span>
-          <span ng-show="!navbar.connected">Disconnected</span>
+          <!-- <span ng-show="navbar.connected">Connected</span> -->
+          <!-- <span ng-show="!navbar.connected">Disconnected</span> -->
         </li>
       </ul>
     </div>

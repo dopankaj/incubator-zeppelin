@@ -243,7 +243,7 @@
 .paragraph .editor {
   width: 100%;
   border-left: 4px solid #DDDDDD;
-  background: rgba(255, 255, 255, 0.0);
+  /*background: rgba(255, 255, 255, 0.0);*/
   margin: 7px 0 2px 0;
 }
 

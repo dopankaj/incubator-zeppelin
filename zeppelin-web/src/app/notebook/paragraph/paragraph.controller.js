@@ -503,7 +503,7 @@ angular.module('zeppelinWebApp')
       $scope.editor.setHighlightActiveLine(false);
       $scope.editor.setHighlightGutterLine(false);
       $scope.editor.getSession().setUseWrapMode(true);
-      $scope.editor.setTheme('ace/theme/chrome');
+      $scope.editor.setTheme('ace/theme/monokai');
       if ($scope.paragraphFocused) {
         $scope.editor.focus();
       }
