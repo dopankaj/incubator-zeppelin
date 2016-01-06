@@ -13,48 +13,62 @@ limitations under the License.
 -->
 
 <div ng-controller="HomeCtrl as home">
-  <div ng-show="home.staticHome" class="box width-full home">
-    <div class="zeppelin">
-     <div class="zeppelin2"></div>
-    </div>
-    <div style="margin-top: -380px;">
-      <div class="row">
-        <div class="col-md-4">
-          <h4>Notebook</h4>
+  <div ng-show="home.staticHome" class="width-full home">
+    <!-- <div class="zeppelin"> -->
+    <!--  <div class="zeppelin2"></div> -->
+    <!-- </div> -->
+    <div class="row">
+        <div class="col-md-12">
+          <h4>Notebooks</h4>
+            <div class="btn-toolbar pull-right" style="margin-bottom:5px;">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#noteImportModal" title="Upload Notebook">
+                <i style="font-size: 15px;" class="fa fa-upload"></i>
+              </button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#noteNameModal" title="Create Notebook">
+                <i style="font-size: 15px;" class="icon-notebook"></i>
+              </button>
+            </div>
 
-          <div>
-            <h5><a href="" data-toggle="modal" data-target="#noteImportModal" style="text-decoration: none;">
-              <i style="font-size: 15px;" class="fa fa-upload"></i> Import note</a></h5>
-            <h5><a href="" data-toggle="modal" data-target="#noteNameModal" style="text-decoration: none;">
-              <i style="font-size: 15px;" class="icon-notebook"></i> Create new note</a></h5>
-            <ul style="list-style-type: none;">
-              <li ng-repeat="note in home.notes.list | orderBy:home.arrayOrderingSrv.notebookListOrdering track by $index">
-                <i style="font-size: 10px;" class="icon-doc"></i>
-                <a style="text-decoration: none;" href="#/notebook/{{note.id}}">{{note.name || 'Note ' + note.id}}</a>
-              </li>
-            </ul>
-          </div>
+            <table class="table table-bordered table-hover table-mobile">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Author</th>
+                  <th>Created at</th>
+                  <th>Status</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="note in home.notes.list | orderBy:home.arrayOrderingSrv.notebookListOrdering track by $index">
+                  <td>
+                    <a style="text-decoration: none;" href="#/notebook/{{note.id}}">{{note.name || 'Note ' + note.id}}</a>
+                  </td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
         </div>
-      </div>
     </div>
     <br/><br/><br/>
   </div>
-
+</div>
 
   <!-- Load notebook -->
-  <div ng-show="home.notebookHome" id="{{currentParagraph.id}}_paragraphColumn_main"
-       ng-repeat="currentParagraph in home.note.paragraphs"
-       ng-controller="ParagraphCtrl"
-       ng-Init="init(currentParagraph)"
-       ng-class="columnWidthClass(currentParagraph.config.colWidth)"
-       class="paragraph-col">
-    <div id="{{currentParagraph.id}}_paragraphColumn"
-         ng-if="currentParagraph.result"
-         ng-include src="'app/notebook/paragraph/paragraph.html'"
-         ng-class="{'paragraph-space box paragraph-margin': !asIframe, 'focused': paragraphFocused}"
-         ng-hide="currentParagraph.config.tableHide && home.viewOnly">
-    </div>
-  </div>
+  <!-- <div ng-show="home.notebookHome" id="{{currentParagraph.id}}_paragraphColumn_main" -->
+  <!--      ng-repeat="currentParagraph in home.note.paragraphs" -->
+  <!--      ng-controller="ParagraphCtrl" -->
+  <!--      ng-Init="init(currentParagraph)" -->
+  <!--      ng-class="columnWidthClass(currentParagraph.config.colWidth)" -->
+  <!--      class="paragraph-col"> -->
+  <!--   <div id="{{currentParagraph.id}}_paragraphColumn" -->
+  <!--        ng-if="currentParagraph.result" -->
+  <!--        ng-include src="'app/notebook/paragraph/paragraph.html'" -->
+  <!--        ng-class="{'paragraph-space box paragraph-margin': !asIframe, 'focused': paragraphFocused}" -->
+  <!--        ng-hide="currentParagraph.config.tableHide && home.viewOnly"> -->
+  <!--   </div> -->
+  <!-- </div> -->
 
   <div style="clear:both;height:10px"></div>
 </div>

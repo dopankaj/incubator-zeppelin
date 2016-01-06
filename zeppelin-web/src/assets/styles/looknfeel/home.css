@@ -40,3 +40,7 @@ body {
 .nv-controlsWrap {
   display: none;
 }
+
+.home{
+  border-width: none;
+}

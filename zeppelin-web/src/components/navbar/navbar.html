@@ -11,7 +11,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<div class="navbar navbar-inverse navbar-fixed-top" style="display: none;" role="navigation" ng-class="{'displayNavBar': !asIframe}">
+<!-- <div class="navbar navbar-inverse navbar-fixed-top" style="display: none;" role="navigation" ng-class="{'displayNavBar': !asIframe}"> -->
   <!-- <div class="container"> -->
   <!--   <div class="navbar-header"> -->
   <!--     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"> -->
@@ -25,27 +25,27 @@ limitations under the License.
   <!--   </div> -->
 
     <div class="collapse navbar-collapse" ng-controller="NavCtrl as navbar">
-      <ul class="nav navbar-nav">
-        <li class="dropdown" dropdown>
-          <a href="#" class="dropdown-toggle" dropdown-toggle>Notebook <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="" data-toggle="modal" data-target="#noteNameModal"><i class="fa fa-plus"></i> Create new note</a></li>
-            <li class="divider"></li>
-            <div id="notebook-list" class="scrollbar-container">
-              <li ng-repeat="note in navbar.notes.list | orderBy:navbar.arrayOrderingSrv.notebookListOrdering track by $index"
-                  ng-class="{'active' : navbar.isActive(note.id)}">
-                <a href="#/notebook/{{note.id}}">{{note.name || 'Note ' + note.id}} </a>
-              </li>
-            </div>
-          </ul>
-        </li>
-        <li>
+      <!-- <ul class="nav navbar-nav"> -->
+      <!--   <li class="dropdown" dropdown> -->
+      <!--     <a href="#" class="dropdown-toggle" dropdown-toggle>Notebook <span class="caret"></span></a> -->
+      <!--     <ul class="dropdown-menu" role="menu"> -->
+      <!--       <li><a href="" data-toggle="modal" data-target="#noteNameModal"><i class="fa fa-plus"></i> Create new note</a></li> -->
+      <!--       <li class="divider"></li> -->
+      <!--       <div id="notebook-list" class="scrollbar-container"> -->
+      <!--         <li ng-repeat="note in navbar.notes.list | orderBy:navbar.arrayOrderingSrv.notebookListOrdering track by $index" -->
+      <!--             ng-class="{'active' : navbar.isActive(note.id)}"> -->
+      <!--           <a href="#/notebook/{{note.id}}">{{note.name || 'Note ' + note.id}} </a> -->
+      <!--         </li> -->
+      <!--       </div> -->
+      <!--     </ul> -->
+      <!--   </li> -->
+      <!--   <li> -->
       <!--     <a href="#/interpreter">Interpreter</a> -->
       <!--   </li> -->
-      </ul>
+      <!-- </ul> -->
 
 
-      <ul class="nav navbar-nav navbar-right" style="margin-top:10px; margin-right:5px;">
+      <!-- <ul class="nav navbar-nav navbar-right" style="margin-top:10px; margin-right:5px;"> -->
         <!-- <li> -->
         <!-- <\!--TODO(bzz): move to Typeahead https://angular-ui.github.io/bootstrap  -\-> -->
         <!--   <form role="search" -->
@@ -71,12 +71,12 @@ limitations under the License.
         <!--     </div> -->
         <!--   </form> -->
         <!-- </li> -->
-        <li class="server-status">
-          <i class="fa fa-circle" ng-class="{'server-connected':navbar.connected, 'server-disconnected':!navbar.connected}"></i>
+        <!-- <li class="server-status"> -->
+        <!--   <i class="fa fa-circle" ng-class="{'server-connected':navbar.connected, 'server-disconnected':!navbar.connected}"></i> -->
           <!-- <span ng-show="navbar.connected">Connected</span> -->
-          <!-- <span ng-show="!navbar.connected">Disconnected</span> -->
-        </li>
-      </ul>
-    </div>
+      <!--     <\!-- <span ng-show="!navbar.connected">Disconnected</span> -\-> -->
+      <!--   </li> -->
+      <!-- </ul> -->
+    <!-- </div> -->
   </div>
-</div>
+<!-- </div> -->

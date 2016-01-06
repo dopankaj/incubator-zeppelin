@@ -23,7 +23,11 @@ angular.module('zeppelinWebApp').controller('HomeCtrl', function($scope, noteboo
   vm.notebookHome = false;
   vm.staticHome = false;
 
-  var initHome = function() {
+  $scope.isReloading = false;
+
+    window.note = websocketMsgSrv;
+
+    var initHome = function() {
     websocketMsgSrv.getHomeNotebook();
   };
 
@@ -46,4 +50,13 @@ angular.module('zeppelinWebApp').controller('HomeCtrl', function($scope, noteboo
       vm.notebookHome = false;
     }
   });
+
+  $scope.$on('setNoteMenu', function(event, notes) {
+    $scope.isReloadingNotes = false;
+  });
+
+  $scope.reloadNotebookList = function() {
+    websocketMsgSrv.reloadAllNotesFromRepo();
+    $scope.isReloadingNotes = true;
+  };
 });

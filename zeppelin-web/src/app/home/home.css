@@ -13,7 +13,7 @@
  */
 
 body {
-  padding-top: 50px;
+  padding-top: 0px;
   color: #212121;
 }
 
@@ -36,6 +36,7 @@ body.asIframe {
 }
 
 body .navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   margin-bottom: 0;
 }
 
@@ -242,7 +243,7 @@ a.navbar-brand:hover {
 }
 
 .zeppelin2 {
-  background: url('/assets/images/zepLogo.png') no-repeat right;
+  /*background: url('/assets/images/zepLogo.png') no-repeat right;*/
   background-position-y: 12px;
   height: 380px;
   opacity: 0.2;
@@ -690,4 +691,13 @@ This part should be removed when new version of bootstrap handles this issue.
 
 .bootstrap-dialog.type-primary .modal-header {
   background: #3071a9;
+}
+
+.table-bordered > thead {
+  background-color: #ddd
+}
+
+.table-bordered > tbody > tr > td {
+  border-left-width: 0px;
+  border-right-width: 0px;
 }
